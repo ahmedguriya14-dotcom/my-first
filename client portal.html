@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almonds Dev | Coding for Community</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        almond: {
+                            light: '#F7E7CE',
+                            DEFAULT: '#EED9B3',
+                            dark: '#D2B48C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans scroll-smooth">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl">🌰</span>
+                <span class="text-xl font-bold tracking-tight text-gray-900">ALMONDS <span class="text-amber-700">DEV</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#mission" class="hover:text-amber-700 transition">Our Mission</a>
+                <a href="#services" class="hover:text-amber-700 transition">How We Help</a>
+                <a href="#get-help" class="hover:text-amber-700 transition">Request Support</a>
+            </nav>
+            <a href="#get-help" class="bg-amber-700 hover:bg-amber-800 text-white px-5 py-2 rounded-full font-medium transition text-sm">
+                Get Help Now
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-amber-50 to-white py-20 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Tech for Good</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mt-4 mb-6 leading-tight">
+                Empowering People Through <span class="text-amber-700">Web Development</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                At Almonds Dev, we build free digital tools, host learning resources, and provide technical support to help individuals and communities thrive in the digital age.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#get-help" class="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-xl font-medium transition shadow-lg">
+                    Need Technical Help?
+                </a>
+                <a href="#services" class="bg-white hover:bg-gray-100 text-gray-900 border border-gray-300 px-8 py-3 rounded-xl font-medium transition">
+                    Explore Resources
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Impact Section -->
+    <section id="mission" class="py-16 max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Our Core Pillars</h2>
+            <p class="text-gray-500 mt-2">Breaking barriers down, one line of code at a time.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-xl mb-4">🤝</div>
+                <h3 class="text-xl font-bold mb-2">Free Web Solutions</h3>
+                <p class="text-gray-600">We design and develop accessible websites for non-profits, community projects, and people starting out with zero budget.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-xl mb-4">📚</div>
+                <h3 class="text-xl font-bold mb-2">Open Education</h3>
+                <p class="text-gray-600">Access simplified tutorials, code templates, and guides designed to teach programming basics to absolute beginners.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-xl mb-4">🛠️</div>
+                <h3 class="text-xl font-bold mb-2">Direct Tech Support</h3>
+                <p class="text-gray-600">Stuck on a bug or struggling to get your community group online? Our developer network is here to guide you directly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Section: Help Categories -->
+    <section id="services" class="bg-gray-900 text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold">What are you looking to solve?</h2>
+                <p class="text-gray-400 mt-2">Select an option to see how Almonds Dev can step in.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Toggle Controls -->
+                <div class="space-y-4">
+                    <button onclick="switchTab('tab1')" id="btn-tab1" class="w-full text-left p-6 rounded-xl border-2 border-amber-600 bg-gray-800/50 transition flex items-start space-x-4">
+                        <span class="text-2xl mt-1">🌐</span>
+                        <div>
+                            <h4 class="font-bold text-lg text-amber-400">I need a website for a social cause</h4>
+                            <p class="text-gray-400 text-sm mt-1">We build landing pages, donation structures, and informational hubs for grassroots groups.</p>
+                        </div>
+                    </button>
+                    <button onclick="switchTab('tab2')" id="btn-tab2" class="w-full text-left p-6 rounded-xl border-2 border-transparent bg-gray-800/30 hover:bg-gray-800/50 transition flex items-start space-x-4">
+                        <span class="text-2xl mt-1">💻</span>
+                        <div>
+                           pment</h4>
+                            <p class="text-gray-400 text-sm mt-1">Get curated roadmaps, clean boilerplates, and friendly peer code-reviews completely free.</p>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Display Box -->
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 flex flex-col justify-between">
+                    <div id="tab-content">
+                        <h3 class="text-2xl font-bold text-amber-400 mb-4">Community Web Architecture</h3>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            We believe great web tools shouldn't only belong to big corporations. Almonds Dev volunteers build semantic, clean, and highly responsive web layouts tailored to showcase your public assistance projects.
+                        </p>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li class="flex items-center">✓ 100% Free hosting consultation</li>
+                            <li class="flex items-center">✓ Mobile-first responsive layouts</li>
+                            <li class="flex items-center">✓ Optimized for slow network connections</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> <h4 class="font-bold text-lg text-white">I want to learn web develo
+    </section>
+
+    <!-- Request Form Section -->
+    <section id="get-help" class="py-20 px-4 max-w-3xl mx-auto">
+        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">Submit a Support Request</h2>
+                <p class="text-gray-500 mt-2">Tell us about your project or what you're stuck on. Our team responds within 48 hours.</p>
+            </div>
+
+            <form id="supportForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                        <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">How can Almonds Dev help you?</label>
+                    <select required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition bg-white">
+                        <option value="">Select an option...</option>
+                        <option value="build">I need a website built for a community cause</option>
+                        <option value="learn">I need help learning / debugging code</option>
+                        <option value="other">Other general assistance</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Message / Project Details</label>
+                    <textarea rows="4" required placeholder="Describe what you are trying to build or solve..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-medium py-4 rounded-xl transition shadow-md">
+                    Send Request
+                </button>
+            </form>
+            
+            <!-- Success Toast Notification -->
+            <div id="successMessage" class="hidden mt-6 p-4 bg-green-50 border border-green-200 text-green-800 rounded-xl text-center font-medium">
+                🎉 Thank you! Your request has been logged. The Almonds Dev community will get in touch soon.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200 py-8 text-center text-sm text-gray-500">
+        <p>&copy; 2026 ALMONDS DEV. Built to pull communities forward through open-source technology.</p>
+    </footer>
+
+    <!-- JavaScript Handling Interaction -->
+    <script>
+        // Interactive Tab Switching Logic
+        const tabData = {
+            tab1: {
+                title: "Community Web Architecture",
+                desc: "We believe great web tools shouldn't only belong to big corporations. Almonds Dev volunteers build semantic, clean, and highly responsive web layouts tailored to showcase your public assistance projects.",
+                features: ["✓ 100% Free hosting consultation", "✓ Mobile-first responsive layouts", "✓ Optimized for slow network connections"]
+            },
+            tab2: {
+                title: "Mentorship & Code Education",
+                desc: "Learning web technologies opens incredible doors, but debugging completely alone can feel overwhelming. Get direct access to experienced engineers who break down complex code into simple terms.",
+                features: ["✓ Structured frontend code pathways", "✓ Friendly, constructive code reviews", "✓ Open-source template libraries"]
+            }
+        };
+
+        function switchTab(tabKey) {
+            const contentBox = document.getElementById('tab-content');
+            const data = tabData[tabKey];
+            
+            // Render new text inside display block
+            contentBox.innerHTML = `
+                <h3 class="text-2xl font-bold text-amber-400 mb-4">${data.title}</h3>
+                <p class="text-gray-300 leading-relaxed mb-6">${data.desc}</p>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    ${data.features.map(f => `<li class="flex items-center">${f}</li>`).join('')}
+                </ul>
+            `;
+
+            // Adjust border active visual states
+            document.getElementById('btn-tab1').className = `w-full text-left p-6 rounded-xl border-2 transition flex items-start space-x-4 ${tabKey === 'tab1' ? 'border-amber-600 bg-gray-800/50' : 'border-transparent bg-gray-800/30'}`;
+            document.getElementById('btn-tab1').querySelector('h4').className = tabKey === 'tab1' ? 'font-bold text-lg text-amber-400' : 'font-bold text-lg text-white';
+            
+            document.getElementById('btn-tab2').className = `w-full text-left p-6 rounded-xl border-2 transition flex items-start space-x-4 ${tabKey === 'tab2' ? 'border-amber-600 bg-gray-800/50' : 'border-transparent bg-gray-800/30'}`;
+            document.getElementById('btn-tab2').querySelector('h4').className = tabKey === 'tab2' ? 'font-bold text-lg text-amber-400' : 'font-bold text-lg text-white';
+        }
+
+        // Form Submission Handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('supportForm').reset();
+            const success = document.getElementById('successMessage');
+            success.classList.remove('hidden');
+            setTimeout(() => {
+                success.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>        
